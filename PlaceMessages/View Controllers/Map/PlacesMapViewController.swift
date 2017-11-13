@@ -39,8 +39,8 @@ final class PlacesMapViewController: UIViewController, ErrorHandleable, Storyboa
         viewModel.delegate = self
         setupUI()
         
-        NotificationCenter.when(.didUpdatedUserLocationAuthorization) { [unowned self] (_) in
-            self.mapView.isMyLocationEnabled = true
+        NotificationCenter.when(.didUpdatedUserLocationAuthorization) { [weak self] (_) in
+            self?.mapView.isMyLocationEnabled = true
         }
     }
     

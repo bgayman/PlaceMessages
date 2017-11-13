@@ -49,8 +49,8 @@ class MapViewModel: NSObject {
             fetchPlaces()
         }
         
-        NotificationCenter.when(.didUpdatedUserLocationAuthorization) { [unowned self] (_) in
-            self.fetchPlaces()
+        NotificationCenter.when(.didUpdatedUserLocationAuthorization) { [weak self] (_) in
+            self?.fetchPlaces()
         }
     }
     
@@ -63,7 +63,6 @@ class MapViewModel: NSObject {
         NetworkActivityIndicatorManager.shared.incrementIndicatorCount()
         GMSPlacesClient.shared().currentPlace { (placeLikelihoodList, error) in
             NetworkActivityIndicatorManager.shared.decrementIndicatorCount()
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if let error = error {
                 self.error = error
             }
