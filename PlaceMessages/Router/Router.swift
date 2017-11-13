@@ -46,9 +46,13 @@ struct Router {
         ContactsManager.shared.fetchContacts(with: deeplinkMessage.fromName) { (result) in
             switch result {
             case .error(let error):
+                Router.show(.place(deeplinkMessage.placeID))
                 splitViewController?.handle(error)
             case .success(let contacts):
-                guard let contact = contacts.first else { return }
+                guard let contact = contacts.first else {
+                    Router.show(.place(deeplinkMessage.placeID))
+                    return
+                }
                 Router.show(.contacts(.messages(contact, .place(deeplinkMessage.placeID))))
             }
         }

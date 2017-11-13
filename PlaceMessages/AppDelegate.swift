@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         GMSPlacesClient.provideAPIKey(Constants.googleAPIKey)
         
         let splitViewController = window!.rootViewController as! UISplitViewController
-        splitViewController.preferredDisplayMode = .allVisible
         splitViewController.delegate = self
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem

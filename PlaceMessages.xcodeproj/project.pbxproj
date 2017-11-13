@@ -14,6 +14,7 @@
 		CD134DF41FB8271600410FA6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD134DF21FB8271600410FA6 /* Router.swift */; };
 		CD134DF61FB827B900410FA6 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD134DF51FB827B900410FA6 /* Destination.swift */; };
 		CD134DF71FB827B900410FA6 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD134DF51FB827B900410FA6 /* Destination.swift */; };
+		CD1737D31FB9D55F005C41D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F82701FB7AF140031D9B0 /* AppDelegate.swift */; };
 		CD297B491FB8D51000E857D8 /* DeepLinkMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD297B481FB8D51000E857D8 /* DeepLinkMessage.swift */; };
 		CD297B4A1FB8D51000E857D8 /* DeepLinkMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD297B481FB8D51000E857D8 /* DeepLinkMessage.swift */; };
 		CD37C8C11FB7E696007F46E0 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD37C8C01FB7E696007F46E0 /* ContactTableViewCell.swift */; };
@@ -733,6 +734,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1737D31FB9D55F005C41D6 /* AppDelegate.swift in Sources */,
 				CDA5DFEE1FB91D5800B54FC7 /* PlaceDetailViewController.swift in Sources */,
 				CD77976F1FB9651F00F6D559 /* Prediction.swift in Sources */,
 				CDB01A5D1FB8A3BF000D2768 /* UsernameViewController.swift in Sources */,
@@ -957,6 +959,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8DDUQH2RUD;
 				INFOPLIST_FILE = PlaceMessagesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -975,6 +978,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8DDUQH2RUD;
 				INFOPLIST_FILE = PlaceMessagesTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
