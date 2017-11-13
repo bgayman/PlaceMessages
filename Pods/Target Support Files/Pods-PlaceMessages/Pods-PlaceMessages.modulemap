@@ -1,0 +1,6 @@
+framework module Pods_PlaceMessages {
+  umbrella header "Pods-PlaceMessages-umbrella.h"
+
+  export *
+  module * { export * }
+}

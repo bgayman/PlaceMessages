@@ -1,0 +1,29 @@
+//
+//  NetworkActivityIndicatorManager.swift
+//  PlaceMessages
+//
+//  Created by Brad G. on 11/11/17.
+//  Copyright © 2017 Brad G. All rights reserved.
+//
+
+import UIKit
+
+/// Small struct to manage network activity indicator
+struct NetworkActivityIndicatorManager {
+    
+    static var shared = NetworkActivityIndicatorManager()
+    
+    private var networkIndicatorCount: Int = 0 {
+        didSet {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = networkIndicatorCount > 0
+        }
+    }
+    
+    mutating func incrementIndicatorCount() {
+        networkIndicatorCount += 1
+    }
+    
+    mutating func decrementIndicatorCount() {
+        networkIndicatorCount -= 1
+    }
+}
