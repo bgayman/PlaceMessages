@@ -13,6 +13,8 @@ import Contacts
 
 @testable import PlaceMessages
 
+/// Current test coverage fails with launch of app from fresh install because of authorizations
+
 class PlaceMessagesTests: XCTestCase {
     
     var deeplink: Deeplink?
@@ -27,7 +29,6 @@ class PlaceMessagesTests: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
