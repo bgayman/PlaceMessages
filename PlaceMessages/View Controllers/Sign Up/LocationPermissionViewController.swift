@@ -74,7 +74,7 @@ class LocationPermissionViewController: UIViewController {
         }
         
         NotificationCenter.when(.UIApplicationDidBecomeActive) { [weak self] (_) in
-            if !ContactsManager.shared.needsToRequestAccess {
+            if !LocationManager.shared.needsAuthorization {
                 self?.didPressNext(self?.nextButton)
             }
         }
