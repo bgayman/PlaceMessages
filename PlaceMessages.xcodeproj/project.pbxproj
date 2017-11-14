@@ -128,6 +128,12 @@
 		CDB01A621FB8A77C000D2768 /* UIView+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB01A601FB8A77C000D2768 /* UIView+Application.swift */; };
 		CDD213CD1FB900B600855621 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD213CC1FB900B600855621 /* ContactsManager.swift */; };
 		CDD213CE1FB900B600855621 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD213CC1FB900B600855621 /* ContactsManager.swift */; };
+		CDD220491FBB9F91002E21DA /* MessageEmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD220471FBB9F91002E21DA /* MessageEmptyStateViewController.swift */; };
+		CDD2204A1FBB9F91002E21DA /* MessageEmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD220471FBB9F91002E21DA /* MessageEmptyStateViewController.swift */; };
+		CDD2204B1FBB9F91002E21DA /* MessageEmptyStateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD220481FBB9F91002E21DA /* MessageEmptyStateViewController.xib */; };
+		CDD2204C1FBB9F91002E21DA /* MessageEmptyStateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD220481FBB9F91002E21DA /* MessageEmptyStateViewController.xib */; };
+		CDD2204E1FBBA5D0002E21DA /* UIViewController+ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2204D1FBBA5D0002E21DA /* UIViewController+ChildViewController.swift */; };
+		CDD2204F1FBBA5D0002E21DA /* UIViewController+ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2204D1FBBA5D0002E21DA /* UIViewController+ChildViewController.swift */; };
 		CDD584091FB88B6400470DE9 /* MessageSendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD584081FB88B6400470DE9 /* MessageSendable.swift */; };
 		CDD5840A1FB88B6400470DE9 /* MessageSendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD584081FB88B6400470DE9 /* MessageSendable.swift */; };
 		CDD5840E1FB890C300470DE9 /* Deeplink.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5840D1FB890C300470DE9 /* Deeplink.swift */; };
@@ -217,6 +223,9 @@
 		CDB01A5B1FB8A3BF000D2768 /* UsernameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsernameViewController.xib; sourceTree = "<group>"; };
 		CDB01A601FB8A77C000D2768 /* UIView+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Application.swift"; sourceTree = "<group>"; };
 		CDD213CC1FB900B600855621 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
+		CDD220471FBB9F91002E21DA /* MessageEmptyStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageEmptyStateViewController.swift; sourceTree = "<group>"; };
+		CDD220481FBB9F91002E21DA /* MessageEmptyStateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageEmptyStateViewController.xib; sourceTree = "<group>"; };
+		CDD2204D1FBBA5D0002E21DA /* UIViewController+ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ChildViewController.swift"; sourceTree = "<group>"; };
 		CDD584081FB88B6400470DE9 /* MessageSendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSendable.swift; sourceTree = "<group>"; };
 		CDD5840D1FB890C300470DE9 /* Deeplink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deeplink.swift; sourceTree = "<group>"; };
 		DA4FA6738341BBF55A4829DE /* Pods-PlaceMessagesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceMessagesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceMessagesTests/Pods-PlaceMessagesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -387,6 +396,7 @@
 				CDB01A571FB8A317000D2768 /* UserDefaults+Application.swift */,
 				CDB01A601FB8A77C000D2768 /* UIView+Application.swift */,
 				CD409AAB1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift */,
+				CDD2204D1FBBA5D0002E21DA /* UIViewController+ChildViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -493,6 +503,8 @@
 				CD8B7C9D1FB8367400C23A30 /* MessageListViewController.swift */,
 				CD8B7C9E1FB8367400C23A30 /* MessageListViewController.xib */,
 				CDD5840C1FB88C8900470DE9 /* Message Cells */,
+				CDD220471FBB9F91002E21DA /* MessageEmptyStateViewController.swift */,
+				CDD220481FBB9F91002E21DA /* MessageEmptyStateViewController.xib */,
 			);
 			path = "Messages List";
 			sourceTree = "<group>";
@@ -597,6 +609,7 @@
 			files = (
 				CD409AB21FBB22EB00FDC786 /* PlaceImageViewController.xib in Resources */,
 				CD4F827D1FB7AF140031D9B0 /* LaunchScreen.storyboard in Resources */,
+				CDD2204B1FBB9F91002E21DA /* MessageEmptyStateViewController.xib in Resources */,
 				CD8B7CB01FB8406200C23A30 /* MessageTableViewCell.xib in Resources */,
 				CD409AA91FBA8DE100FDC786 /* LocationPermissionViewController.xib in Resources */,
 				CD4F827A1FB7AF140031D9B0 /* Assets.xcassets in Resources */,
@@ -619,6 +632,7 @@
 				CDB01A5F1FB8A3BF000D2768 /* UsernameViewController.xib in Resources */,
 				CD6875201FB80DD700A79C6B /* PlaceSearchViewController.xib in Resources */,
 				CD6875261FB80F5700A79C6B /* PlacePredictionTableViewCell.xib in Resources */,
+				CDD2204C1FBB9F91002E21DA /* MessageEmptyStateViewController.xib in Resources */,
 				CD8B7CB11FB8406200C23A30 /* MessageTableViewCell.xib in Resources */,
 				CD1737D91FBA81B6005C41D6 /* ContactsPermissionViewController.xib in Resources */,
 				CD8B7CA21FB8367400C23A30 /* MessageListViewController.xib in Resources */,
@@ -773,6 +787,8 @@
 				CDD584091FB88B6400470DE9 /* MessageSendable.swift in Sources */,
 				CDD5840E1FB890C300470DE9 /* Deeplink.swift in Sources */,
 				CD4F82A31FB7BEE10031D9B0 /* NetworkActivityIndicatorManager.swift in Sources */,
+				CDD220491FBB9F91002E21DA /* MessageEmptyStateViewController.swift in Sources */,
+				CDD2204E1FBBA5D0002E21DA /* UIViewController+ChildViewController.swift in Sources */,
 				CD37C8CE1FB7FA73007F46E0 /* CLLocationCoordinate2D+GooglePlaces.swift in Sources */,
 				CD134DF31FB8271600410FA6 /* Router.swift in Sources */,
 				CD4F82711FB7AF140031D9B0 /* AppDelegate.swift in Sources */,
@@ -807,6 +823,7 @@
 				CD8B7CAF1FB8406200C23A30 /* MessageTableViewCell.swift in Sources */,
 				CD4F82941FB7B1010031D9B0 /* UIColor+Application.swift in Sources */,
 				CD1737D71FBA81B6005C41D6 /* ContactsPermissionViewController.swift in Sources */,
+				CDD2204A1FBB9F91002E21DA /* MessageEmptyStateViewController.swift in Sources */,
 				CD37C8D51FB7FB3B007F46E0 /* NotificationCenter+Closures.swift in Sources */,
 				CD409AB91FBB24A200FDC786 /* PanInteractionController.swift in Sources */,
 				CD4F82B01FB7C3320031D9B0 /* GMSMarker+Place.swift in Sources */,
@@ -837,6 +854,7 @@
 				CD7C34951FB7D5810024BBBB /* ContactListViewModel.swift in Sources */,
 				CD297B4A1FB8D51000E857D8 /* DeepLinkMessage.swift in Sources */,
 				CD77976C1FB9646E00F6D559 /* Place.swift in Sources */,
+				CDD2204F1FBBA5D0002E21DA /* UIViewController+ChildViewController.swift in Sources */,
 				CD8B7CA51FB836BE00C23A30 /* MessageListViewModel.swift in Sources */,
 				CD4F82AD1FB7C1CA0031D9B0 /* UIAlertController+Errors.swift in Sources */,
 				CD8B7CA81FB83E3B00C23A30 /* ImageClient.swift in Sources */,

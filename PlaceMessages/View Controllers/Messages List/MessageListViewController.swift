@@ -15,9 +15,11 @@ class MessageListViewController: UIViewController, MessageSendable, ErrorHandlea
     
     // MARK: - Properties
     private let viewModel: MessageListViewModel
+    private let messageEmptyStateViewController = MessageEmptyStateViewController()
     
     // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var emptyStateContainerView: UIView!
     
     // MARK: - Lazy Init
     lazy private var sendBarButtonItem: UIBarButtonItem = {
@@ -57,6 +59,8 @@ class MessageListViewController: UIViewController, MessageSendable, ErrorHandlea
         }
         navigationItem.rightBarButtonItem = sendBarButtonItem
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        add(childViewController: messageEmptyStateViewController, to: emptyStateContainerView, at: 0)
     }
     
     // MARK: - Actions
@@ -67,6 +71,15 @@ class MessageListViewController: UIViewController, MessageSendable, ErrorHandlea
         navigationController.modalPresentationStyle = .popover
         navigationController.popoverPresentationController?.barButtonItem = sender
         present(navigationController, animated: true)
+    }
+    
+    // MARK: - Helpers
+    func updateEmptyState() {
+        let shouldShowEmptyState = viewModel.numberOfRowsInSection(MessageListViewModel.MessageListSections.received.rawValue) == 0 && viewModel.numberOfRowsInSection(MessageListViewModel.MessageListSections.sent.rawValue) == 0
+        let alpha: CGFloat = shouldShowEmptyState ? 1.0 : 0.0
+        UIView.animate(withDuration: 0.3) { [unowned self] in
+            self.emptyStateContainerView.alpha = alpha
+        }
     }
 }
 
@@ -113,10 +126,12 @@ extension MessageListViewController: UITableViewDelegate, UITableViewDataSource 
 extension MessageListViewController: MessageListViewModelDelegate {
     
     func messageListViewModelDidUpdate(_ viewModel: MessageListViewModel) {
+        updateEmptyState()
         tableView?.reloadData()
     }
     
     func messageListViewModel(_ viewModel: MessageListViewModel, didFailWith error: Error?) {
+        updateEmptyState()
         handle(error)
     }
 }
