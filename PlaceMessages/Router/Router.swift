@@ -60,11 +60,15 @@ struct Router {
     
     static func show(_ destination: Destination, animated: Bool = true) {
         switch destination {
-        case .username:
-            let usernameViewController = UsernameViewController()
-            usernameViewController.modalPresentationStyle = .fullScreen
-            usernameViewController.modalPresentationCapturesStatusBarAppearance = true
-            splitViewController?.present(usernameViewController, animated: animated)
+        case .signUp(let destination):
+            if splitViewController?.presentedViewController == nil {
+                let usernameViewController = UsernameViewController()
+                let navigationController = UINavigationController(rootViewController: usernameViewController)
+                navigationController.modalPresentationStyle = .fullScreen
+                navigationController.modalPresentationCapturesStatusBarAppearance = true
+                splitViewController?.present(navigationController, animated: animated)
+            }
+            show(destination, animated: animated)
         case .contacts(let destination):
             show(destination, animated: animated)
         case .map:
@@ -79,7 +83,21 @@ struct Router {
         }
     }
     
-    static private  func show(_ destination: Destination.ContactsDestination, animated: Bool) {
+    static private func show(_ destination: Destination.SignUpDestination, animated: Bool) {
+        guard let navigationController = splitViewController?.presentedViewController as? UINavigationController else { return }
+        switch destination {
+        case .username:
+            break
+        case .contacts:
+            let contactsPermissionViewController = ContactsPermissionViewController()
+            navigationController.pushViewController(contactsPermissionViewController, animated: animated)
+        case .location:
+            let locationPermissionViewController = LocationPermissionViewController()
+            navigationController.pushViewController(locationPermissionViewController, animated: animated)
+        }
+    }
+    
+    static private func show(_ destination: Destination.ContactsDestination, animated: Bool) {
         switch destination {
         case .map:
             let placesMapViewController = PlacesMapViewController.makeFromStoryboard()

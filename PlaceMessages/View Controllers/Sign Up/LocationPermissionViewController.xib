@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationPermissionViewController" customModule="PlaceMessages" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="TT6-j3-47q" id="WZY-kN-f70"/>
+                <outlet property="imageView" destination="iIi-El-Uz8" id="ztg-fH-SXQ"/>
+                <outlet property="nextButton" destination="m0y-W2-Os2" id="HCB-hM-woA"/>
+                <outlet property="titleLabel" destination="LIv-ZO-JVq" id="B5Q-60-JkF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="45u-Nz-vDc">
+                    <rect key="frame" x="10" y="80" width="355" height="61"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIv-ZO-JVq">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Messages Works Best if We Can Access Your Location." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT6-j3-47q">
+                            <rect key="frame" x="0.0" y="40.5" width="355" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="ghn-Mp-TdV"/>
+                    </constraints>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icLocation" translatesAutoresizingMaskIntoConstraints="NO" id="iIi-El-Uz8">
+                    <rect key="frame" x="37.5" y="181" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="3oe-2u-xol"/>
+                        <constraint firstAttribute="height" constant="300" id="I3i-qI-axX"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0y-W2-Os2">
+                    <rect key="frame" x="87.5" y="541" width="200" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7Oe-j1-YgN"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="zf3-kM-B9s"/>
+                    </constraints>
+                    <state key="normal" title="All Right Already"/>
+                    <connections>
+                        <action selector="didPressNext:" destination="-1" eventType="touchUpInside" id="a7S-dY-U01"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="m0y-W2-Os2" firstAttribute="top" secondItem="iIi-El-Uz8" secondAttribute="bottom" priority="245" constant="60" id="6hL-7K-nvr"/>
+                <constraint firstItem="45u-Nz-vDc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GmW-mJ-gnK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="45u-Nz-vDc" secondAttribute="trailing" priority="999" constant="10" id="LEZ-V3-ieL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="m0y-W2-Os2" secondAttribute="bottom" constant="17" id="NtK-L2-v6N"/>
+                <constraint firstItem="45u-Nz-vDc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="OhE-4T-ppS"/>
+                <constraint firstItem="iIi-El-Uz8" firstAttribute="top" secondItem="45u-Nz-vDc" secondAttribute="bottom" constant="40" id="bsu-J7-4Ix"/>
+                <constraint firstItem="m0y-W2-Os2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iIi-El-Uz8" secondAttribute="bottom" constant="20" id="djk-mc-VYJ"/>
+                <constraint firstItem="iIi-El-Uz8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hsO-Pa-h8t"/>
+                <constraint firstItem="m0y-W2-Os2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mxT-jh-uaF"/>
+                <constraint firstItem="45u-Nz-vDc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" priority="999" constant="60" id="vK1-Bb-NOr"/>
+                <constraint firstItem="45u-Nz-vDc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" priority="999" constant="10" id="zRJ-bH-5tc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icLocation" width="300" height="300"/>
+    </resources>
+</document>

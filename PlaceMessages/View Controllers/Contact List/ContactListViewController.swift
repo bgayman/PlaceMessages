@@ -61,11 +61,8 @@ final class ContactListViewController: UIViewController, ErrorHandleable, Storyb
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if UserDefaults.standard.userName == nil {
-            Router.show(.username, animated: true)
-        }
-        if ContactsManager.shared.needsToRequestAccess {
-            contactListViewModel.requestAccess()
+        if UserDefaults.standard.userName == nil || ContactsManager.shared.needsToRequestAccess || LocationManager.shared.needsAuthorization {
+            Router.show(.signUp(.username))
         }
     }
     

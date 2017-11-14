@@ -15,6 +15,12 @@
 		CD134DF61FB827B900410FA6 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD134DF51FB827B900410FA6 /* Destination.swift */; };
 		CD134DF71FB827B900410FA6 /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD134DF51FB827B900410FA6 /* Destination.swift */; };
 		CD1737D31FB9D55F005C41D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F82701FB7AF140031D9B0 /* AppDelegate.swift */; };
+		CD1737D61FBA81B6005C41D6 /* ContactsPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1737D41FBA81B6005C41D6 /* ContactsPermissionViewController.swift */; };
+		CD1737D71FBA81B6005C41D6 /* ContactsPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1737D41FBA81B6005C41D6 /* ContactsPermissionViewController.swift */; };
+		CD1737D81FBA81B6005C41D6 /* ContactsPermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1737D51FBA81B6005C41D6 /* ContactsPermissionViewController.xib */; };
+		CD1737D91FBA81B6005C41D6 /* ContactsPermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD1737D51FBA81B6005C41D6 /* ContactsPermissionViewController.xib */; };
+		CD1737DB1FBA846E005C41D6 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1737DA1FBA846E005C41D6 /* Emitter.swift */; };
+		CD1737DC1FBA846E005C41D6 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1737DA1FBA846E005C41D6 /* Emitter.swift */; };
 		CD297B491FB8D51000E857D8 /* DeepLinkMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD297B481FB8D51000E857D8 /* DeepLinkMessage.swift */; };
 		CD297B4A1FB8D51000E857D8 /* DeepLinkMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD297B481FB8D51000E857D8 /* DeepLinkMessage.swift */; };
 		CD37C8C11FB7E696007F46E0 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD37C8C01FB7E696007F46E0 /* ContactTableViewCell.swift */; };
@@ -29,6 +35,12 @@
 		CD37C8D51FB7FB3B007F46E0 /* NotificationCenter+Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD37C8D31FB7FB3B007F46E0 /* NotificationCenter+Closures.swift */; };
 		CD37C8D71FB7FEFD007F46E0 /* UITableView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD37C8D61FB7FEFD007F46E0 /* UITableView+Animations.swift */; };
 		CD37C8D81FB7FEFD007F46E0 /* UITableView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD37C8D61FB7FEFD007F46E0 /* UITableView+Animations.swift */; };
+		CD409AA71FBA8DE100FDC786 /* LocationPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AA51FBA8DE100FDC786 /* LocationPermissionViewController.swift */; };
+		CD409AA81FBA8DE100FDC786 /* LocationPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AA51FBA8DE100FDC786 /* LocationPermissionViewController.swift */; };
+		CD409AA91FBA8DE100FDC786 /* LocationPermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD409AA61FBA8DE100FDC786 /* LocationPermissionViewController.xib */; };
+		CD409AAA1FBA8DE100FDC786 /* LocationPermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD409AA61FBA8DE100FDC786 /* LocationPermissionViewController.xib */; };
+		CD409AAC1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AAB1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift */; };
+		CD409AAD1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AAB1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift */; };
 		CD4F82711FB7AF140031D9B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F82701FB7AF140031D9B0 /* AppDelegate.swift */; };
 		CD4F82781FB7AF140031D9B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4F82761FB7AF140031D9B0 /* Main.storyboard */; };
 		CD4F827A1FB7AF140031D9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4F82791FB7AF140031D9B0 /* Assets.xcassets */; };
@@ -134,6 +146,9 @@
 		CD122F771FB9364D002A4B97 /* MessageCreatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCreatable.swift; sourceTree = "<group>"; };
 		CD134DF21FB8271600410FA6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CD134DF51FB827B900410FA6 /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		CD1737D41FBA81B6005C41D6 /* ContactsPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPermissionViewController.swift; sourceTree = "<group>"; };
+		CD1737D51FBA81B6005C41D6 /* ContactsPermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsPermissionViewController.xib; sourceTree = "<group>"; };
+		CD1737DA1FBA846E005C41D6 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
 		CD297B481FB8D51000E857D8 /* DeepLinkMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkMessage.swift; sourceTree = "<group>"; };
 		CD37C8C01FB7E696007F46E0 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		CD37C8CA1FB7F8F3007F46E0 /* PlaceSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchViewModel.swift; sourceTree = "<group>"; };
@@ -141,6 +156,9 @@
 		CD37C8D01FB7FAD9007F46E0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CD37C8D31FB7FB3B007F46E0 /* NotificationCenter+Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Closures.swift"; sourceTree = "<group>"; };
 		CD37C8D61FB7FEFD007F46E0 /* UITableView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Animations.swift"; sourceTree = "<group>"; };
+		CD409AA51FBA8DE100FDC786 /* LocationPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionViewController.swift; sourceTree = "<group>"; };
+		CD409AA61FBA8DE100FDC786 /* LocationPermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationPermissionViewController.xib; sourceTree = "<group>"; };
+		CD409AAB1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
 		CD4F826D1FB7AF140031D9B0 /* PlaceMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4F82701FB7AF140031D9B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD4F82771FB7AF140031D9B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -237,6 +255,10 @@
 			children = (
 				CDB01A5A1FB8A3BF000D2768 /* UsernameViewController.swift */,
 				CDB01A5B1FB8A3BF000D2768 /* UsernameViewController.xib */,
+				CD1737D41FBA81B6005C41D6 /* ContactsPermissionViewController.swift */,
+				CD1737D51FBA81B6005C41D6 /* ContactsPermissionViewController.xib */,
+				CD409AA51FBA8DE100FDC786 /* LocationPermissionViewController.swift */,
+				CD409AA61FBA8DE100FDC786 /* LocationPermissionViewController.xib */,
 			);
 			path = "Sign Up";
 			sourceTree = "<group>";
@@ -332,6 +354,7 @@
 		CD4F82981FB7B23D0031D9B0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CD1737DA1FBA846E005C41D6 /* Emitter.swift */,
 				CD4F82921FB7B1010031D9B0 /* UIColor+Application.swift */,
 				CD4F82951FB7B1290031D9B0 /* UIFont+Application.swift */,
 				CD4F82AB1FB7C1CA0031D9B0 /* UIAlertController+Errors.swift */,
@@ -341,6 +364,7 @@
 				CD37C8D61FB7FEFD007F46E0 /* UITableView+Animations.swift */,
 				CDB01A571FB8A317000D2768 /* UserDefaults+Application.swift */,
 				CDB01A601FB8A77C000D2768 /* UIView+Application.swift */,
+				CD409AAB1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,12 +573,14 @@
 			files = (
 				CD4F827D1FB7AF140031D9B0 /* LaunchScreen.storyboard in Resources */,
 				CD8B7CB01FB8406200C23A30 /* MessageTableViewCell.xib in Resources */,
+				CD409AA91FBA8DE100FDC786 /* LocationPermissionViewController.xib in Resources */,
 				CD4F827A1FB7AF140031D9B0 /* Assets.xcassets in Resources */,
 				CDB01A5E1FB8A3BF000D2768 /* UsernameViewController.xib in Resources */,
 				CD8B7CA11FB8367400C23A30 /* MessageListViewController.xib in Resources */,
 				CDA5DFEF1FB91D5800B54FC7 /* PlaceDetailViewController.xib in Resources */,
 				CD4F82781FB7AF140031D9B0 /* Main.storyboard in Resources */,
 				CD4F82B21FB7CC760031D9B0 /* Style.json in Resources */,
+				CD1737D81FBA81B6005C41D6 /* ContactsPermissionViewController.xib in Resources */,
 				CD6875251FB80F5700A79C6B /* PlacePredictionTableViewCell.xib in Resources */,
 				CD68751F1FB80DD700A79C6B /* PlaceSearchViewController.xib in Resources */,
 			);
@@ -568,9 +594,11 @@
 				CD6875201FB80DD700A79C6B /* PlaceSearchViewController.xib in Resources */,
 				CD6875261FB80F5700A79C6B /* PlacePredictionTableViewCell.xib in Resources */,
 				CD8B7CB11FB8406200C23A30 /* MessageTableViewCell.xib in Resources */,
+				CD1737D91FBA81B6005C41D6 /* ContactsPermissionViewController.xib in Resources */,
 				CD8B7CA21FB8367400C23A30 /* MessageListViewController.xib in Resources */,
 				CDA5DFF01FB91D5800B54FC7 /* PlaceDetailViewController.xib in Resources */,
 				CD4F82B31FB7CC760031D9B0 /* Style.json in Resources */,
+				CD409AAA1FBA8DE100FDC786 /* LocationPermissionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,6 +715,7 @@
 				CDA5DFED1FB91D5800B54FC7 /* PlaceDetailViewController.swift in Sources */,
 				CD77976E1FB9651F00F6D559 /* Prediction.swift in Sources */,
 				CDB01A5C1FB8A3BF000D2768 /* UsernameViewController.swift in Sources */,
+				CD409AAC1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift in Sources */,
 				CD37C8C11FB7E696007F46E0 /* ContactTableViewCell.swift in Sources */,
 				CD37C8D11FB7FAD9007F46E0 /* LocationManager.swift in Sources */,
 				CD8B7CAE1FB8406200C23A30 /* MessageTableViewCell.swift in Sources */,
@@ -694,6 +723,7 @@
 				CD37C8D41FB7FB3B007F46E0 /* NotificationCenter+Closures.swift in Sources */,
 				CD4F82931FB7B1010031D9B0 /* UIColor+Application.swift in Sources */,
 				CDB01A611FB8A77C000D2768 /* UIView+Application.swift in Sources */,
+				CD409AA71FBA8DE100FDC786 /* LocationPermissionViewController.swift in Sources */,
 				CD4F829A1FB7B2AA0031D9B0 /* DataStore.swift in Sources */,
 				CD6875101FB801BF00A79C6B /* StoryboardInitializable.swift in Sources */,
 				CD4F82A81FB7C1820031D9B0 /* ErrorHandleable.swift in Sources */,
@@ -704,6 +734,7 @@
 				CDA5DFF21FB91DFA00B54FC7 /* PlaceViewModel.swift in Sources */,
 				CD68751D1FB80DD700A79C6B /* PlaceSearchViewController.swift in Sources */,
 				CD8B7CAA1FB83E6400C23A30 /* FileStorage.swift in Sources */,
+				CD1737D61FBA81B6005C41D6 /* ContactsPermissionViewController.swift in Sources */,
 				CD68752A1FB8166600A79C6B /* Result.swift in Sources */,
 				CD7C34911FB7D4470024BBBB /* ContactListViewController.swift in Sources */,
 				CD37C8CB1FB7F8F3007F46E0 /* PlaceSearchViewModel.swift in Sources */,
@@ -721,6 +752,7 @@
 				CD77976B1FB9646E00F6D559 /* Place.swift in Sources */,
 				CD8B7CA41FB836BE00C23A30 /* MessageListViewModel.swift in Sources */,
 				CD4F82A01FB7BE5A0031D9B0 /* MapViewModel.swift in Sources */,
+				CD1737DB1FBA846E005C41D6 /* Emitter.swift in Sources */,
 				CD8B7CA71FB83E3B00C23A30 /* ImageClient.swift in Sources */,
 				CD37C8D71FB7FEFD007F46E0 /* UITableView+Animations.swift in Sources */,
 				CD8B7C971FB833BB00C23A30 /* Messages.xcdatamodeld in Sources */,
@@ -734,14 +766,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD409AA81FBA8DE100FDC786 /* LocationPermissionViewController.swift in Sources */,
 				CD1737D31FB9D55F005C41D6 /* AppDelegate.swift in Sources */,
 				CDA5DFEE1FB91D5800B54FC7 /* PlaceDetailViewController.swift in Sources */,
 				CD77976F1FB9651F00F6D559 /* Prediction.swift in Sources */,
 				CDB01A5D1FB8A3BF000D2768 /* UsernameViewController.swift in Sources */,
+				CD1737DC1FBA846E005C41D6 /* Emitter.swift in Sources */,
 				CD37C8C21FB7E696007F46E0 /* ContactTableViewCell.swift in Sources */,
+				CD409AAD1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift in Sources */,
 				CD37C8D21FB7FAD9007F46E0 /* LocationManager.swift in Sources */,
 				CD8B7CAF1FB8406200C23A30 /* MessageTableViewCell.swift in Sources */,
 				CD4F82941FB7B1010031D9B0 /* UIColor+Application.swift in Sources */,
+				CD1737D71FBA81B6005C41D6 /* ContactsPermissionViewController.swift in Sources */,
 				CD37C8D51FB7FB3B007F46E0 /* NotificationCenter+Closures.swift in Sources */,
 				CD4F82B01FB7C3320031D9B0 /* GMSMarker+Place.swift in Sources */,
 				CDB01A621FB8A77C000D2768 /* UIView+Application.swift in Sources */,

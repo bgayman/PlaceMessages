@@ -11,7 +11,7 @@ import Contacts
 
 enum Destination {
     
-    case username
+    case signUp(SignUpDestination)
     case contacts(ContactsDestination)
     case map
     case place(String)
@@ -24,5 +24,11 @@ enum Destination {
     enum MessagesDestination {
         case messages
         case place(String)
+    }
+    
+    enum SignUpDestination {
+        case username
+        case contacts
+        case location
     }
 }

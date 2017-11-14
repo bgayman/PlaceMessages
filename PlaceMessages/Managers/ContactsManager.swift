@@ -25,11 +25,13 @@ final class ContactsManager {
     func requestAccess(completion: @escaping (Result<Bool>) -> Void) {
         if needsToRequestAccess {
             contactStore.requestAccess(for: .contacts) {(success, error) in
-                guard error == nil, success else {
-                    completion(.error(error: error!))
-                    return
+                DispatchQueue.main.async {
+                    guard error == nil, success else {
+                        completion(.error(error: error!))
+                        return
+                    }
+                    completion(.success(response: success))
                 }
-                completion(.success(response: success))
             }
         }
     }

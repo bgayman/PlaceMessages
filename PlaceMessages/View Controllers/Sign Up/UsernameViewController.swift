@@ -45,6 +45,8 @@ class UsernameViewController: UIViewController {
     private func setupUI() {
         view.backgroundColor = UIColor.appBlue
         
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        
         titleLabel.numberOfLines = 0
         titleLabel.font = UIFont.appFont(textStyle: .title1, weight: .bold)
         titleLabel.textColor = .white
@@ -72,7 +74,15 @@ class UsernameViewController: UIViewController {
         }
         UserDefaults.standard.set(userName: name)
         UINotificationFeedbackGenerator().notificationOccurred(.success)
-        dismiss(animated: true)
+        if ContactsManager.shared.needsToRequestAccess {
+            Router.show(.signUp(.contacts))
+        }
+        else if LocationManager.shared.needsAuthorization {
+            Router.show(.signUp(.location))
+        }
+        else {
+            dismiss(animated: true)
+        }
     }
     
 }

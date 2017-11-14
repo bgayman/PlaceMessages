@@ -13,6 +13,10 @@ final class LocationManager: NSObject {
     
     var currentLocation: CLLocationCoordinate2D?
     
+    var needsAuthorization: Bool {
+        return CLLocationManager.authorizationStatus() == .notDetermined
+    }
+    
     let locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
