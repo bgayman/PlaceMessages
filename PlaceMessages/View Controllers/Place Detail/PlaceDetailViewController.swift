@@ -22,6 +22,8 @@ class PlaceDetailViewController: UIViewController, ErrorHandleable, MessageSenda
     
     // MARK: - Properties
     private let viewModel: PlaceViewModel
+    private var image: UIImage?
+    private var text: String?
     
     // MARK: - Outlets
     @IBOutlet private weak var imageView: UIImageView!
@@ -103,6 +105,7 @@ class PlaceDetailViewController: UIViewController, ErrorHandleable, MessageSenda
         addressLabel.font = UIFont.appFont(textStyle: .headline, weight: .medium)
         phoneNumber.font = UIFont.appFont(textStyle: .subheadline, weight: .semibold)
         ratingLabel.font = UIFont.appFont(textStyle: .footnote, weight: .regular)
+        attributionLabel.font = UIFont.appFont(textStyle: .body, weight: .regular)
         
         if let styleURL = viewModel.styleURL {
             mapView.mapStyle = try? GMSMapStyle(contentsOfFileURL: styleURL)
@@ -139,6 +142,14 @@ class PlaceDetailViewController: UIViewController, ErrorHandleable, MessageSenda
         navigationController.modalPresentationStyle = .popover
         navigationController.popoverPresentationController?.barButtonItem = sender
         present(navigationController, animated: true)
+    }
+    
+    @IBAction private func didTapImageView(_ sender: UITapGestureRecognizer) {
+        let placeImageViewController = PlaceImageViewController(image: self.image, attributionText: self.text)
+        placeImageViewController.transitioningDelegate = placeImageViewController
+        placeImageViewController.modalPresentationStyle = .custom
+        placeImageViewController.modalPresentationCapturesStatusBarAppearance = true
+        present(placeImageViewController, animated: true)
     }
     
     @objc private func didPressDone(_ sender: UIBarButtonItem) {
@@ -187,7 +198,10 @@ extension PlaceDetailViewController: PlaceViewModelDelegate {
     func placeViewModel(_ viewModel: PlaceViewModel, didUpdate image: UIImage?, metadata: GMSPlacePhotoMetadata?) {
         activityIndicator.stopAnimating()
         imageView.image = image
-        attributionLabel.attributedText = metadata?.attributions
+        imageView.isUserInteractionEnabled = image != nil
+        self.image = image
+        text = metadata?.attributions?.string
+        attributionLabel.text = text
     }
 }
 
@@ -206,5 +220,13 @@ extension PlaceDetailViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
         viewModel.messageSendingDidFinish(with: result)
+    }
+}
+
+// MARK: - MagicMoveFromViewControllerDataSource
+extension PlaceDetailViewController: MagicMoveFromViewControllerDataSource {
+    
+    var fromMagicView: UIImageView? {
+        return imageView
     }
 }

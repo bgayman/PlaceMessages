@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13526" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13524"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceImageViewController" customModule="PlaceMessages" customModuleProvider="target">
+            <connections>
+                <outlet property="attributionLabel" destination="YpG-Xe-5hG" id="Ab3-dY-3UX"/>
+                <outlet property="closeButton" destination="OoZ-bq-7NI" id="Qg4-Dv-wEI"/>
+                <outlet property="imageView" destination="mbB-VA-BpH" id="Bdm-YZ-vjA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mbB-VA-BpH">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoZ-bq-7NI">
+                    <rect key="frame" x="20" y="40" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="F1Z-ha-iqY"/>
+                        <constraint firstAttribute="height" constant="44" id="xjl-3W-Jc6"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="icCloseOrange"/>
+                    <connections>
+                        <action selector="didPressClose:" destination="-1" eventType="touchUpInside" id="lzd-Br-oLf"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YpG-Xe-5hG">
+                    <rect key="frame" x="313" y="626" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mbB-VA-BpH" secondAttribute="trailing" id="41k-Qt-XSg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YpG-Xe-5hG" secondAttribute="bottom" constant="20" id="9DZ-Yr-NCX"/>
+                <constraint firstItem="OoZ-bq-7NI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="AWd-iB-rBM"/>
+                <constraint firstItem="mbB-VA-BpH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Boa-Qf-JLF"/>
+                <constraint firstAttribute="bottom" secondItem="mbB-VA-BpH" secondAttribute="bottom" id="EOK-TO-yM8"/>
+                <constraint firstItem="YpG-Xe-5hG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="a8A-Lf-k2Z"/>
+                <constraint firstItem="OoZ-bq-7NI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pgB-52-Ula"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YpG-Xe-5hG" secondAttribute="trailing" constant="20" id="uEq-cK-5TF"/>
+                <constraint firstItem="mbB-VA-BpH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zhb-Pq-XbV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icCloseOrange" width="24" height="24"/>
+    </resources>
+</document>

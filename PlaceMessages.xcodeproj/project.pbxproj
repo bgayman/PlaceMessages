@@ -41,6 +41,14 @@
 		CD409AAA1FBA8DE100FDC786 /* LocationPermissionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD409AA61FBA8DE100FDC786 /* LocationPermissionViewController.xib */; };
 		CD409AAC1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AAB1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift */; };
 		CD409AAD1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AAB1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift */; };
+		CD409AB01FBB22EB00FDC786 /* PlaceImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AAE1FBB22EB00FDC786 /* PlaceImageViewController.swift */; };
+		CD409AB11FBB22EB00FDC786 /* PlaceImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AAE1FBB22EB00FDC786 /* PlaceImageViewController.swift */; };
+		CD409AB21FBB22EB00FDC786 /* PlaceImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD409AAF1FBB22EB00FDC786 /* PlaceImageViewController.xib */; };
+		CD409AB31FBB22EB00FDC786 /* PlaceImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD409AAF1FBB22EB00FDC786 /* PlaceImageViewController.xib */; };
+		CD409AB51FBB23D000FDC786 /* MagicMoveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AB41FBB23D000FDC786 /* MagicMoveAnimator.swift */; };
+		CD409AB61FBB23D000FDC786 /* MagicMoveAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AB41FBB23D000FDC786 /* MagicMoveAnimator.swift */; };
+		CD409AB81FBB24A200FDC786 /* PanInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AB71FBB24A200FDC786 /* PanInteractionController.swift */; };
+		CD409AB91FBB24A200FDC786 /* PanInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD409AB71FBB24A200FDC786 /* PanInteractionController.swift */; };
 		CD4F82711FB7AF140031D9B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4F82701FB7AF140031D9B0 /* AppDelegate.swift */; };
 		CD4F82781FB7AF140031D9B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4F82761FB7AF140031D9B0 /* Main.storyboard */; };
 		CD4F827A1FB7AF140031D9B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4F82791FB7AF140031D9B0 /* Assets.xcassets */; };
@@ -159,6 +167,10 @@
 		CD409AA51FBA8DE100FDC786 /* LocationPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionViewController.swift; sourceTree = "<group>"; };
 		CD409AA61FBA8DE100FDC786 /* LocationPermissionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationPermissionViewController.xib; sourceTree = "<group>"; };
 		CD409AAB1FBA8E1B00FDC786 /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
+		CD409AAE1FBB22EB00FDC786 /* PlaceImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceImageViewController.swift; sourceTree = "<group>"; };
+		CD409AAF1FBB22EB00FDC786 /* PlaceImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceImageViewController.xib; sourceTree = "<group>"; };
+		CD409AB41FBB23D000FDC786 /* MagicMoveAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveAnimator.swift; sourceTree = "<group>"; };
+		CD409AB71FBB24A200FDC786 /* PanInteractionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanInteractionController.swift; sourceTree = "<group>"; };
 		CD4F826D1FB7AF140031D9B0 /* PlaceMessages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceMessages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4F82701FB7AF140031D9B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD4F82771FB7AF140031D9B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -301,6 +313,15 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		CD409ABA1FBB24DC00FDC786 /* Animation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD409AB41FBB23D000FDC786 /* MagicMoveAnimator.swift */,
+				CD409AB71FBB24A200FDC786 /* PanInteractionController.swift */,
+			);
+			path = "Animation Controllers";
+			sourceTree = "<group>";
+		};
 		CD4F82641FB7AF140031D9B0 = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +348,7 @@
 				CD4F82761FB7AF140031D9B0 /* Main.storyboard */,
 				CD4F82701FB7AF140031D9B0 /* AppDelegate.swift */,
 				CD37C8C31FB7F7F3007F46E0 /* View Controllers */,
+				CD409ABA1FBB24DC00FDC786 /* Animation Controllers */,
 				CD4F82A61FB7C1480031D9B0 /* View Model */,
 				CD8B7C9C1FB835B400C23A30 /* Model */,
 				CD8B7C931FB8333B00C23A30 /* Managers */,
@@ -459,6 +481,8 @@
 			children = (
 				CDA5DFEB1FB91D5800B54FC7 /* PlaceDetailViewController.swift */,
 				CDA5DFEC1FB91D5800B54FC7 /* PlaceDetailViewController.xib */,
+				CD409AAE1FBB22EB00FDC786 /* PlaceImageViewController.swift */,
+				CD409AAF1FBB22EB00FDC786 /* PlaceImageViewController.xib */,
 			);
 			path = "Place Detail";
 			sourceTree = "<group>";
@@ -571,6 +595,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD409AB21FBB22EB00FDC786 /* PlaceImageViewController.xib in Resources */,
 				CD4F827D1FB7AF140031D9B0 /* LaunchScreen.storyboard in Resources */,
 				CD8B7CB01FB8406200C23A30 /* MessageTableViewCell.xib in Resources */,
 				CD409AA91FBA8DE100FDC786 /* LocationPermissionViewController.xib in Resources */,
@@ -590,6 +615,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD409AB31FBB22EB00FDC786 /* PlaceImageViewController.xib in Resources */,
 				CDB01A5F1FB8A3BF000D2768 /* UsernameViewController.xib in Resources */,
 				CD6875201FB80DD700A79C6B /* PlaceSearchViewController.xib in Resources */,
 				CD6875261FB80F5700A79C6B /* PlacePredictionTableViewCell.xib in Resources */,
@@ -722,12 +748,14 @@
 				CD4F829D1FB7BC450031D9B0 /* PlacesMapViewController.swift in Sources */,
 				CD37C8D41FB7FB3B007F46E0 /* NotificationCenter+Closures.swift in Sources */,
 				CD4F82931FB7B1010031D9B0 /* UIColor+Application.swift in Sources */,
+				CD409AB81FBB24A200FDC786 /* PanInteractionController.swift in Sources */,
 				CDB01A611FB8A77C000D2768 /* UIView+Application.swift in Sources */,
 				CD409AA71FBA8DE100FDC786 /* LocationPermissionViewController.swift in Sources */,
 				CD4F829A1FB7B2AA0031D9B0 /* DataStore.swift in Sources */,
 				CD6875101FB801BF00A79C6B /* StoryboardInitializable.swift in Sources */,
 				CD4F82A81FB7C1820031D9B0 /* ErrorHandleable.swift in Sources */,
 				CD4F82961FB7B1290031D9B0 /* UIFont+Application.swift in Sources */,
+				CD409AB01FBB22EB00FDC786 /* PlaceImageViewController.swift in Sources */,
 				CDD213CD1FB900B600855621 /* ContactsManager.swift in Sources */,
 				CD8B7C9A1FB8351300C23A30 /* Message.swift in Sources */,
 				CDB01A581FB8A317000D2768 /* UserDefaults+Application.swift in Sources */,
@@ -738,6 +766,7 @@
 				CD68752A1FB8166600A79C6B /* Result.swift in Sources */,
 				CD7C34911FB7D4470024BBBB /* ContactListViewController.swift in Sources */,
 				CD37C8CB1FB7F8F3007F46E0 /* PlaceSearchViewModel.swift in Sources */,
+				CD409AB51FBB23D000FDC786 /* MagicMoveAnimator.swift in Sources */,
 				CD4F82AC1FB7C1CA0031D9B0 /* UIAlertController+Errors.swift in Sources */,
 				CD134DF61FB827B900410FA6 /* Destination.swift in Sources */,
 				CD8B7C9F1FB8367400C23A30 /* MessageListViewController.swift in Sources */,
@@ -779,6 +808,7 @@
 				CD4F82941FB7B1010031D9B0 /* UIColor+Application.swift in Sources */,
 				CD1737D71FBA81B6005C41D6 /* ContactsPermissionViewController.swift in Sources */,
 				CD37C8D51FB7FB3B007F46E0 /* NotificationCenter+Closures.swift in Sources */,
+				CD409AB91FBB24A200FDC786 /* PanInteractionController.swift in Sources */,
 				CD4F82B01FB7C3320031D9B0 /* GMSMarker+Place.swift in Sources */,
 				CDB01A621FB8A77C000D2768 /* UIView+Application.swift in Sources */,
 				CD4F829E1FB7BC450031D9B0 /* PlacesMapViewController.swift in Sources */,
@@ -796,6 +826,7 @@
 				CD37C8CC1FB7F8F3007F46E0 /* PlaceSearchViewModel.swift in Sources */,
 				CD4F82881FB7AF140031D9B0 /* PlaceMessagesTests.swift in Sources */,
 				CD134DF71FB827B900410FA6 /* Destination.swift in Sources */,
+				CD409AB11FBB22EB00FDC786 /* PlaceImageViewController.swift in Sources */,
 				CD8B7CA01FB8367400C23A30 /* MessageListViewController.swift in Sources */,
 				CDD5840A1FB88B6400470DE9 /* MessageSendable.swift in Sources */,
 				CDD5840F1FB890C300470DE9 /* Deeplink.swift in Sources */,
@@ -812,6 +843,7 @@
 				CD37C8D81FB7FEFD007F46E0 /* UITableView+Animations.swift in Sources */,
 				CD8B7C981FB833BB00C23A30 /* Messages.xcdatamodeld in Sources */,
 				CD122F791FB9364D002A4B97 /* MessageCreatable.swift in Sources */,
+				CD409AB61FBB23D000FDC786 /* MagicMoveAnimator.swift in Sources */,
 				CD6875241FB80F5700A79C6B /* PlacePredictionTableViewCell.swift in Sources */,
 				CD7C34921FB7D4470024BBBB /* ContactListViewController.swift in Sources */,
 			);
