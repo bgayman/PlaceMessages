@@ -57,7 +57,7 @@
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="7Oe-j1-YgN"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="zf3-kM-B9s"/>
                     </constraints>
-                    <state key="normal" title="All Right Already"/>
+                    <state key="normal" title="Alright Already"/>
                     <connections>
                         <action selector="didPressNext:" destination="-1" eventType="touchUpInside" id="a7S-dY-U01"/>
                     </connections>
