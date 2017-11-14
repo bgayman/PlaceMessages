@@ -84,6 +84,7 @@ class ContactsPermissionViewController: UIViewController, ErrorHandleable {
                 self.handle(error)
             case .success:
                 if LocationManager.shared.needsAuthorization {
+                    NotificationCenter.default.post(name: .didUpdatedUserContactsAuthorization, object: nil)
                     Router.show(.signUp(.location))
                 }
                 else {

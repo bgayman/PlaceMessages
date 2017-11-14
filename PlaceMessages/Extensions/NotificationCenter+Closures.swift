@@ -14,6 +14,7 @@ let keyboardWillHide = NotificationDescriptor(name: .UIKeyboardWillHide, parse: 
 extension Notification.Name {
     static let didUpdatedUserLocation = Notification.Name("DidUpdatedUserLocationNotification")
     static let didUpdatedUserLocationAuthorization = Notification.Name("didUpdatedUserLocationAuthorization")
+    static let didUpdatedUserContactsAuthorization = Notification.Name("didUpdatedUserContactsAuthorization")
 }
 
 extension NotificationCenter {

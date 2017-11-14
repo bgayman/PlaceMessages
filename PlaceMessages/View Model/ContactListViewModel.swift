@@ -37,6 +37,15 @@ final class ContactListViewModel: NSObject {
         if !ContactsManager.shared.needsToRequestAccess {
             self.fetchContacts()
         }
+        else {
+            NotificationCenter.when(.didUpdatedUserContactsAuthorization) { [weak self] (_) in
+                self?.fetchContacts()
+            }
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Contacts Store
