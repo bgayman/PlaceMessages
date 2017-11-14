@@ -33,12 +33,17 @@ class ContactsPermissionViewController: UIViewController, ErrorHandleable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupNotifications()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         emitter.frame = view.bounds
         emitter.emitterSize = CGSize(width: view.bounds.width * 2.0, height: 5.0)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
     // MARK: - Setup
@@ -63,7 +68,16 @@ class ContactsPermissionViewController: UIViewController, ErrorHandleable {
         imageView.tintColor = .white
     }
     
-    @IBAction private func didPressNext(_ sender: UIButton) {
+    private func setupNotifications() {
+        NotificationCenter.when(.UIApplicationDidBecomeActive) { [weak self] (_) in
+            if !ContactsManager.shared.needsToRequestAccess {
+                self?.didPressNext(self?.nextButton)
+            }
+        }
+    }
+    
+    // MARK: - Actions
+    @IBAction private func didPressNext(_ sender: UIButton?) {
         ContactsManager.shared.requestAccess { (result) in
             switch result {
             case .error(let error):

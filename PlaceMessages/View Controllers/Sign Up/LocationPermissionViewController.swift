@@ -33,6 +33,7 @@ class LocationPermissionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupNotifications()
     }
     
     override func viewDidLayoutSubviews() {
@@ -65,13 +66,22 @@ class LocationPermissionViewController: UIViewController {
         view.layer.addSublayer(emitter)
         
         imageView.tintColor = .white
-        
+    }
+    
+    private func setupNotifications() {
         NotificationCenter.when(.didUpdatedUserLocationAuthorization) { [weak self] (_) in
             self?.dismiss(animated: true)
         }
+        
+        NotificationCenter.when(.UIApplicationDidBecomeActive) { [weak self] (_) in
+            if !ContactsManager.shared.needsToRequestAccess {
+                self?.didPressNext(self?.nextButton)
+            }
+        }
     }
     
-    @IBAction private func didPressNext(_ sender: UIButton) {
+    // MARK: - Actions
+    @IBAction private func didPressNext(_ sender: UIButton?) {
         LocationManager.shared.getUserLocation()
     }
 }
