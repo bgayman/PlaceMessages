@@ -59,8 +59,17 @@ final class MagicMoveAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let toVC = transitionContext.viewController(forKey: .to)!
         let container = transitionContext.containerView
         
-        guard let navVC = fromVC as? UINavigationController,
-              let fromDataSource = navVC.topViewController as? MagicMoveFromViewControllerDataSource else {
+        let fromDataSource: MagicMoveFromViewControllerDataSource
+        if let navVC = fromVC as? UINavigationController,
+              let fromDS = navVC.topViewController as? MagicMoveFromViewControllerDataSource {
+            fromDataSource = fromDS
+        }
+        else if let splitVC = fromVC as? UISplitViewController,
+            let navVC = splitVC.viewControllers.first as? UINavigationController,
+            let fromDS = navVC.topViewController as? MagicMoveFromViewControllerDataSource {
+            fromDataSource = fromDS
+        }
+        else {
             transitionContext.completeTransition(false)
             return
         }
@@ -130,8 +139,18 @@ final class MagicMoveAnimator: NSObject, UIViewControllerAnimatedTransitioning {
             transitionContext.completeTransition(false)
             return
         }
-        guard let navVC = toVC as? UINavigationController,
-              let toDataSource = navVC.topViewController as? MagicMoveFromViewControllerDataSource else {
+        
+        let toDataSource: MagicMoveFromViewControllerDataSource
+        if let navVC = toVC as? UINavigationController,
+            let fromDS = navVC.topViewController as? MagicMoveFromViewControllerDataSource {
+            toDataSource = fromDS
+        }
+        else if let splitVC = toVC as? UISplitViewController,
+            let navVC = splitVC.viewControllers.first as? UINavigationController,
+            let fromDS = navVC.topViewController as? MagicMoveFromViewControllerDataSource {
+            toDataSource = fromDS
+        }
+        else {
             transitionContext.completeTransition(false)
             return
         }
