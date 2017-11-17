@@ -16,24 +16,38 @@ struct DeeplinkMessage {
     let placeID: String
     let placeName: String
     let messageType: Message.MessageType
+    
+    enum CodingKeys: String, CodingKey {
+        case date
+        case fromName
+        case toName
+        case placeID
+        case placeName
+        case messageType
+    }
 }
 
 extension DeeplinkMessage {
     
     init?(urlComponents: URLComponents) {
-        guard let queryItems = urlComponents.queryItems,
-              let dateComponent = queryItems.first(where: { $0.name == "date" }),
-              let fromNameComponent = queryItems.first(where: { $0.name == "fromName" }),
-              let toNameComponent = queryItems.first(where: { $0.name == "toName" }),
-              let placeIDComponent = queryItems.first(where: { $0.name == "placeID" }),
-              let placeNameComponent = queryItems.first(where: { $0.name == "placeName" }),
-              let messageTypeValueComponent = queryItems.first(where: { $0.name == "messageType" }),
-              let timeInterval = Double(dateComponent.value?.removingPercentEncoding ?? ""),
-              let fromName = fromNameComponent.value?.removingPercentEncoding,
-              let toName = toNameComponent.value?.removingPercentEncoding,
-              let placeID = placeIDComponent.value?.removingPercentEncoding,
-              let placeName = placeNameComponent.value?.removingPercentEncoding,
-              let messageTypeValue = messageTypeValueComponent.value?.removingPercentEncoding,
+        guard let queryItems = urlComponents.queryItems else { return nil }
+        let dictionary = queryItems.reduce([String: String]()) { (result, queryItem) in
+            var result = result
+            result[queryItem.name] = queryItem.value?.removingPercentEncoding
+            return result
+        }
+        guard let deeplinkMessage = DeeplinkMessage(dictionary: dictionary) else { return nil }
+        self = deeplinkMessage
+    }
+    
+    init?(dictionary: [String: String]) {
+        guard let dateComponent = dictionary[CodingKeys.date.rawValue],
+              let timeInterval = Double(dateComponent.removingPercentEncoding ?? ""),
+              let fromName = dictionary[CodingKeys.fromName.rawValue],
+              let toName = dictionary[CodingKeys.toName.rawValue],
+              let placeID = dictionary[CodingKeys.placeID.rawValue],
+              let placeName = dictionary[CodingKeys.placeName.rawValue],
+              let messageTypeValue = dictionary[CodingKeys.messageType.rawValue],
               let messageType = Message.MessageType(rawValue: messageTypeValue) else { return nil }
         self.date = Date(timeIntervalSince1970: timeInterval)
         self.fromName = fromName
