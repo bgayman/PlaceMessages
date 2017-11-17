@@ -36,16 +36,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         return true
     }
 
-    // MARK: - Split View
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
-        return true
-    }
-
+    // MARK: - Linking
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         guard let deeplink = Deeplink(url: url),
               let deeplinkMessage = deeplink.deeplinkMessage else { return false }
         DataStore.shared.add(deeplinkMessage)
         Router.show(deeplink: deeplink)
+        return true
+    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        if userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+           let url = userActivity.webpageURL,
+           let deeplink = Deeplink(url: url) {
+            Router.show(deeplink: deeplink)
+        }
+        restorationHandler(nil)
+        return true
+    }
+    
+    // MARK: - Split View
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
         return true
     }
     

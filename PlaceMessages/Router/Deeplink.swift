@@ -18,8 +18,20 @@ struct Deeplink {
         return urlComponents.url
     }
     
+    var universalLink: URL? {
+        var universalComponents = URLComponents()
+        universalComponents.scheme = "https"
+        universalComponents.host = "kitura-starter-pseudocorneous-aardwolf.mybluemix.net"
+        universalComponents.queryItems = urlComponents.queryItems
+        return universalComponents.url
+    }
+    
     var deeplinkMessage: DeeplinkMessage? {
         return DeeplinkMessage(urlComponents: urlComponents)
+    }
+    
+    var messageText: String {
+        return [universalLink?.absoluteString, url?.absoluteString].flatMap { $0 }.joined(separator: "\n\n")
     }
     
     // MARK: - Lifecycle

@@ -21,7 +21,7 @@ extension MessageSendable where Self: UIViewController {
         composeVC.messageComposeDelegate = self
         
         composeVC.recipients = [phoneNumber]
-        composeVC.body = deeplink.url?.absoluteString ?? ""
+        composeVC.body = deeplink.messageText
         present(composeVC, animated: true)
     }
     
@@ -30,7 +30,7 @@ extension MessageSendable where Self: UIViewController {
         let composeVC = MFMailComposeViewController()
         composeVC.mailComposeDelegate = self
         composeVC.setToRecipients([email])
-        composeVC.setMessageBody(deeplink.url?.absoluteString ?? "" , isHTML: false)
+        composeVC.setMessageBody(deeplink.messageText , isHTML: false)
         present(composeVC, animated: true)
     }
 }
