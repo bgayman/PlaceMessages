@@ -78,7 +78,7 @@ class MessageListViewController: UIViewController, MessageSendable, ErrorHandlea
         let shouldShowEmptyState = viewModel.numberOfRowsInSection(MessageListViewModel.MessageListSections.received.rawValue) == 0 && viewModel.numberOfRowsInSection(MessageListViewModel.MessageListSections.sent.rawValue) == 0
         let alpha: CGFloat = shouldShowEmptyState ? 1.0 : 0.0
         UIView.animate(withDuration: 0.3) { [unowned self] in
-            self.emptyStateContainerView.alpha = alpha
+            self.emptyStateContainerView?.alpha = alpha
         }
     }
 }
